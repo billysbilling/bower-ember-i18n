@@ -8,7 +8,7 @@
   "main": "src/index.js",
   "billyBuilder": {
     "include": "src"
-  }
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",
