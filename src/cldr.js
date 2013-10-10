@@ -237,4 +237,4 @@
   CLDR.pluralForm.Many  = Many;
   CLDR.pluralForm.Other = Other;
 
-}(this));
+}(window));
