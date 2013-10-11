@@ -2,8 +2,6 @@
     var I18n, assert, findTemplate, get, set, isBinding, lookupKey, pluralForm,
         keyExists;
     
-    var Handlebars = Ember.Handlebars;
-
     get = Ember.Handlebars.get || Ember.Handlebars.getPath || Ember.getPath;
     set = Ember.set;
 
