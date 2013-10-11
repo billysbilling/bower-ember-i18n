@@ -6,7 +6,7 @@
     "James Rosen"
   ],
   "main": "src/index.js",
-  "billyBuilder": {
+  "billy-builder": {
     "include": "src"
   },
   "license": "MIT",
