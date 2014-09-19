@@ -1,7 +1,7 @@
 (function(window) {
     var I18n, assert, findTemplate, get, set, isBinding, lookupKey, pluralForm,
         keyExists;
-    
+
     get = Ember.Handlebars.get || Ember.Handlebars.getPath || Ember.getPath;
     set = Ember.set;
 
@@ -119,10 +119,8 @@
     // CRUFT: in v2, which requires Ember 1.0+, Ember.uuid will always be
     //        available, so this function can be cleaned up.
     var uniqueElementId = (function(){
-        var id = Ember.uuid || 0;
         return function() {
-            var elementId = 'i18n-' + id++;
-            return elementId;
+            return 'i18n' + Ember.uuid();
         };
     })();
 
@@ -148,7 +146,7 @@
                 property += 'Binding';
             }
             //[sebastianseilund] End nice property fix
-            
+
             isBindingMatch = property.match(isBinding);
 
             if (isBindingMatch) {
@@ -162,7 +160,7 @@
 
                 observer = function() {
                     var elem, newValue;
-                    if (view.get('state') !== 'inDOM') {
+                    if (view.get('_state') !== 'inDOM') {
                         Em.removeObserver(root, normalizedPath, invoker);
                         return;
                     }
